@@ -1,0 +1,205 @@
+/* App container */
+.app-container {
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px; /* Small padding for mobile */
+  font-family: "Inter", sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 480px; /* Responsive max width */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo-form input,
+.todo-form select {
+  flex: 1 1 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.todo-form input:focus,
+.todo-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.todo-form button {
+  flex: 1 1 100%;
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.todo-form button:hover {
+  background: #1d4ed8;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  background: #f9fafb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  border: 1px solid #e5e7eb;
+  transition: background 0.2s;
+}
+
+.todo-item:hover {
+  background: #f3f4f6;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #6b7280;
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.todo-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.todo-text {
+  font-size: 14px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.calendar-icon {
+  width: 14px;
+  height: 14px;
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.actions button:hover {
+  background: #e5e7eb;
+}
+
+/* Priority Pills */
+.priority-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 4px;
+  color: white;
+}
+
+.priority-pill.high {
+  background: #ef4444;
+}
+
+.priority-pill.medium {
+  background: #f59e0b;
+}
+
+.priority-pill.low {
+  background: #10b981;
+}
+
+/* Overdue Pill */
+.overdue-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 4px;
+  color: white;
+  background: #dc2626; /* red */
+}
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 12px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Responsiveness */
+@media (min-width: 640px) {
+  .todo-form input,
+  .todo-form select {
+    flex: 1 1 auto;
+  }
+
+  .todo-form button {
+    flex: none;
+    width: auto;
+  }
+
+  .todo-left {
+    gap: 8px;
+  }
+}
